@@ -1,542 +1,302 @@
 [
   {
-    "id": "licenses-01",
-    "topic": "licenses",
+    "id": "basics-01",
+    "topic": "basics",
     "difficulty": 1,
-    "question": "What does the MIT license allow?",
+    "question": "open-source, licensing, and business models.What is the fundamental definition of Open Source software?",
     "answers": [
-      "Use, modify and distribute code",
-      "Read code only",
-      "Non-commercial use only",
-      "Use without preserving notices"
+      "Software that is always completely free of charge",
+      "Software whose license allows anyone to inspect, use, modify and redistribute its accessible source code",
+      "Software developed exclusively by non-profit volunteers",
+      "Software that has no copyright or legal restrictions"
     ],
-    "correct": 0,
-    "explanation": "MIT grants broad permissions while requiring the copyright and permission notices.",
-    "source": "https://opensource.org/license/mit"
-  },
-  {
-    "id": "licenses-02",
-    "topic": "licenses",
-    "difficulty": 1,
-    "question": "Which license is copyleft?",
-    "answers": [
-      "GPL",
-      "MIT",
-      "BSD 2-Clause",
-      "ISC"
-    ],
-    "correct": 0,
-    "explanation": "GPL preserves user freedoms in distributed derivative works.",
-    "source": "https://www.gnu.org/licenses/copyleft.en.html"
-  },
-  {
-    "id": "licenses-03",
-    "topic": "licenses",
-    "difficulty": 2,
-    "question": "What does Apache 2.0 explicitly grant besides copyright permissions?",
-    "answers": [
-      "A patent license from contributors",
-      "Rights to all trademarks",
-      "Permission to remove all notices",
-      "A bug-free warranty"
-    ],
-    "correct": 0,
-    "explanation": "Apache 2.0 includes an explicit patent grant subject to its terms.",
-    "source": "https://www.apache.org/licenses/LICENSE-2.0"
-  },
-  {
-    "id": "licenses-04",
-    "topic": "licenses",
-    "difficulty": 1,
-    "question": "Can open source software be sold?",
-    "answers": [
-      "Yes",
-      "No",
-      "Only with OSI permission",
-      "Only without source code"
-    ],
-    "correct": 0,
-    "explanation": "The OSI definition permits selling software; the applicable license still must be followed.",
+    "correct": 1,
+    "explanation": "Open source requires license permissions to use, modify and redistribute software; source visibility alone is insufficient, and charging is allowed.",
     "source": "https://opensource.org/osd"
   },
   {
-    "id": "licenses-05",
-    "topic": "licenses",
+    "id": "basics-02",
+    "topic": "basics",
     "difficulty": 2,
-    "question": "Is a public repository without a license automatically open source?",
+    "question": "How does a \"Copyleft\" license (like GPLv3+) differ from a \"Permissive\" license (like Apache-2.0 or MIT)?",
     "answers": [
-      "No, permissions are not automatically granted",
-      "Yes, if it has a README",
-      "Yes, GitHub always applies MIT",
-      "Yes, after the first fork"
+      "Copyleft forbids any commercial use of the software",
+      "Permissive licenses require you to pay royalties to the original author",
+      "When distributing a covered derivative work, GPL requires preserving GPL terms and providing corresponding source",
+      "Permissive licenses hide the source code from the public"
     ],
-    "correct": 0,
-    "explanation": "Source visibility alone does not grant a license to use and redistribute it.",
-    "source": "https://choosealicense.com/no-permission/"
+    "correct": 2,
+    "explanation": "GPL copyleft applies when distributing covered derivative works. Private modifications do not automatically need public release.",
+    "source": "https://www.gnu.org/licenses/gpl-faq.html"
   },
   {
-    "id": "licenses-06",
-    "topic": "licenses",
+    "id": "basics-03",
+    "topic": "basics",
     "difficulty": 2,
-    "question": "What characterizes a permissive license?",
+    "question": "According to the open-source \"service economy,\" where does revenue typically come from?",
     "answers": [
-      "Few restrictions on reuse",
-      "A ban on commercial use",
-      "Mandatory copyright transfer",
-      "A ban on modifications"
+      "Activation keys and paid software upgrades",
+      "Selling user data and in-app advertisements",
+      "Support, customization, hosting, and training",
+      "Patent licensing fees"
     ],
-    "correct": 0,
-    "explanation": "Permissive licenses allow broad reuse with relatively few conditions.",
-    "source": "https://www.gnu.org/licenses/license-list.html"
+    "correct": 2,
+    "explanation": "Open licensing can support paid services such as support, customization, training and managed hosting.",
+    "source": "https://opensource.org/faq"
   },
   {
-    "id": "licenses-07",
-    "topic": "licenses",
+    "id": "basics-04",
+    "topic": "basics",
+    "difficulty": 2,
+    "question": "What does \"self-hosting\" an open-source tool mean for your data?",
+    "answers": [
+      "Your data is encrypted on the vendor's cloud servers",
+      "You control its storage and processing infrastructure; external transfers depend on settings and integrations",
+      "Your data is automatically shared with the open-source community",
+      "Your data is backed up on GitHub"
+    ],
+    "correct": 1,
+    "explanation": "Self-hosting gives deployment and storage control. Telemetry, external APIs and backups may still transfer data outside the infrastructure.",
+    "source": "https://www.gov.uk/guidance/using-open-source-software"
+  },
+  {
+    "id": "basics-05",
+    "topic": "basics",
     "difficulty": 3,
-    "question": "You distribute a modified GPLv3 program. What is generally required?",
+    "question": "What is \"digital colonialism\"?",
     "answers": [
-      "Provide corresponding source under GPLv3",
-      "Pay FSF a license fee",
-      "Publish all personal projects",
-      "Prohibit further copying"
+      "Moving tech company servers to developing nations for cheaper electricity",
+      "Using technology to dominate a region by controlling data flows, dictating prices, and creating vendor dependency",
+      "Requiring all open-source code to be written in English",
+      "Exporting old computer hardware without manuals"
     ],
-    "correct": 0,
-    "explanation": "GPLv3 distribution requires compliance with copyleft and corresponding-source provisions.",
-    "source": "https://www.gnu.org/licenses/gpl-3.0.html"
+    "correct": 1,
+    "explanation": "The term describes unequal power in digital systems, including platform dependency and control over data.",
+    "source": "https://www.tni.org/en/article/digital-colonialism"
   },
   {
-    "id": "licenses-08",
-    "topic": "licenses",
-    "difficulty": 3,
-    "question": "Does GPL require publishing private modifications you do not distribute?",
-    "answers": [
-      "No",
-      "Yes, always",
-      "Only via GitHub",
-      "Only after one year"
-    ],
-    "correct": 0,
-    "explanation": "GPL allows private modifications and use without publication.",
-    "source": "https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic"
-  },
-  {
-    "id": "licenses-09",
-    "topic": "licenses",
-    "difficulty": 3,
-    "question": "Which license includes a source-offer condition for network interaction?",
-    "answers": [
-      "GNU AGPLv3",
-      "MIT",
-      "BSD 3-Clause",
-      "ISC"
-    ],
-    "correct": 0,
-    "explanation": "AGPLv3 requires offering source to users interacting remotely with a modified version.",
-    "source": "https://www.gnu.org/licenses/agpl-3.0.html"
-  },
-  {
-    "id": "git-10",
-    "topic": "git",
+    "id": "dpg-01",
+    "topic": "dpg",
     "difficulty": 1,
-    "question": "What is a fork on GitHub?",
+    "question": "Is having an open-source license enough for a project to be a Digital Public Good (DPG)?",
     "answers": [
-      "A separate repository linked to an upstream",
-      "Deleting a branch",
-      "A command to undo a commit",
-      "An archive without history"
+      "Yes, any project on GitHub is automatically a DPG",
+      "No, it must also meet all 9 indicators of the DPG Standard, including UN SDG alignment and \"Do No Harm\" safeguards",
+      "Yes, as long as it is used by at least one government",
+      "No, it must be owned and funded directly by the United Nations"
+    ],
+    "correct": 1,
+    "explanation": "Open licensing is one of nine indicators; the standard also covers SDG relevance, documentation and do-no-harm safeguards.",
+    "source": "https://www.digitalpublicgoods.net/standard"
+  },
+  {
+    "id": "dpg-02",
+    "topic": "dpg",
+    "difficulty": 2,
+    "question": "What is the DPG Registry?",
+    "answers": [
+      "A list of open-source projects applying for venture capital",
+      "A directory of all software engineers working in the UN",
+      "A searchable, curated list of projects verified to meet the DPG Standard",
+      "A database of proprietary government contracts"
+    ],
+    "correct": 2,
+    "explanation": "The DPGA registry helps users find projects reviewed against the DPG Standard.",
+    "source": "https://www.digitalpublicgoods.net/registry"
+  },
+  {
+    "id": "dpg-03",
+    "topic": "dpg",
+    "difficulty": 2,
+    "question": "Which DPG Standard indicator requires explicitly documenting who owns the copyright and other project assets?",
+    "answers": [
+      "Platform independence",
+      "Clear ownership",
+      "Non-PII data extraction",
+      "SDG Relevance"
+    ],
+    "correct": 1,
+    "explanation": "Clear Ownership requires asset ownership to be defined and documented; governance transparency does not replace ownership information.",
+    "source": "https://www.digitalpublicgoods.net/standard"
+  },
+  {
+    "id": "dpg-04",
+    "topic": "dpg",
+    "difficulty": 2,
+    "question": "Which DPG provides free, collaborative geospatial data used globally for navigation, urban planning, and humanitarian disaster response?",
+    "answers": [
+      "DHIS2",
+      "Mojaloop",
+      "OpenStreetMap",
+      "GovStack"
+    ],
+    "correct": 2,
+    "explanation": "OpenStreetMap is a collaboratively maintained map with open geospatial data, also used by humanitarian organizations.",
+    "source": "https://www.openstreetmap.org/about"
+  },
+  {
+    "id": "dpg-05",
+    "topic": "dpg",
+    "difficulty": 3,
+    "question": "Which DPG is used by over 80 countries to collect, manage, and analyze national health data like disease surveillance and vaccination campaigns?",
+    "answers": [
+      "DHIS2",
+      "CodiTeach",
+      "OpenPLC",
+      "Common Voice"
     ],
     "correct": 0,
-    "explanation": "A fork lets you develop independently and propose changes upstream.",
+    "explanation": "DHIS2 is an open information management platform used by health ministries in more than 80 countries.",
+    "source": "https://dhis2.org/health/"
+  },
+  {
+    "id": "community-01",
+    "topic": "community",
+    "difficulty": 1,
+    "question": "What does the governance term \"BDFL\" stand for?",
+    "answers": [
+      "Board of Developers for Linux",
+      "Benevolent Dictator for Life",
+      "Basic Design Framework License",
+      "Backend Developer & Function Lead"
+    ],
+    "correct": 1,
+    "explanation": "BDFL means Benevolent Dictator for Life: a recognized leader with final decision authority in a project.",
+    "source": "https://www.theopensourceway.org/the_open_source_way-guidebook-2.0.html"
+  },
+  {
+    "id": "community-02",
+    "topic": "community",
+    "difficulty": 2,
+    "question": "How is decision-making power earned in a \"Meritocracy\" governance model?",
+    "answers": [
+      "By donating the largest amount of money to the project",
+      "By being the original founder with permanent veto power",
+      "Through consistent, high-quality contributions and demonstrated competence",
+      "Through random lottery among registered users"
+    ],
+    "correct": 2,
+    "explanation": "Meritocratic projects link trust and responsibility to contribution and competence rather than donations; specific rules vary.",
+    "source": "https://www.apache.org/foundation/how-it-works.html"
+  },
+  {
+    "id": "community-03",
+    "topic": "community",
+    "difficulty": 2,
+    "question": "What is the first recommended step after finding an open-source project you want to contribute to?",
+    "answers": [
+      "Immediately rewrite its core architecture and submit it",
+      "Join its chat or forum, read the documentation, and observe the community culture",
+      "Message the lead maintainer privately demanding maintainer privileges",
+      "Fork the repository and change the license"
+    ],
+    "correct": 1,
+    "explanation": "Reading documentation, contribution guidelines and public discussions helps newcomers understand expectations and choose a useful first task.",
+    "source": "https://opensource.guide/how-to-contribute/"
+  },
+  {
+    "id": "community-04",
+    "topic": "community",
+    "difficulty": 2,
+    "question": "Which characteristic of a healthy open-source community ensures that decisions are made openly rather than behind closed doors?",
+    "answers": [
+      "Transparent governance",
+      "Vendor lock-in",
+      "Strict non-disclosure agreements",
+      "Synchronous-only meetings"
+    ],
+    "correct": 0,
+    "explanation": "Transparent governance makes decision rules and reasons visible and keeps discussions public where possible.",
+    "source": "https://opensource.guide/leadership-and-governance/"
+  },
+  {
+    "id": "community-05",
+    "topic": "community",
+    "difficulty": 3,
+    "question": "Which pair consists of asynchronous communication channels often used for archived, threaded community discussions?",
+    "answers": [
+      "Live video calls and voice chat",
+      "Forums (e.g., Discourse) and mailing lists",
+      "In-person hackathons and phone calls",
+      "Instant messaging and live screen-sharing"
+    ],
+    "correct": 1,
+    "explanation": "Forums and mailing lists allow replies at different times and preserve discussions for future participants.",
+    "source": "https://www.apache.org/foundation/mailinglists.html"
+  },
+  {
+    "id": "github-01",
+    "topic": "github",
+    "difficulty": 1,
+    "question": "Why is the \"Fork, Branch, and Pull Request (PR)\" workflow used in open-source projects?",
+    "answers": [
+      "It keeps the source code hidden until the project is finished",
+      "It guarantees that two people never edit the same repository",
+      "It protects the quality and stability of the main branch while allowing anyone to propose changes",
+      "It automatically bypasses code review for all contributors"
+    ],
+    "correct": 2,
+    "explanation": "Forks and branches isolate work; pull requests support discussion, tests and review before merging.",
     "source": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks"
   },
   {
-    "id": "git-11",
-    "topic": "git",
-    "difficulty": 1,
-    "question": "What is a pull request for?",
-    "answers": [
-      "Propose and discuss changes",
-      "Download RAM",
-      "Buy a repository",
-      "Erase all history"
-    ],
-    "correct": 0,
-    "explanation": "A pull request supports discussion and review before merging changes.",
-    "source": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
-  },
-  {
-    "id": "git-12",
-    "topic": "git",
-    "difficulty": 1,
-    "question": "Where can you report a reproducible bug?",
-    "answers": [
-      "In a project issue",
-      "In a random commit",
-      "In the license name",
-      "In an unexplained version tag"
-    ],
-    "correct": 0,
-    "explanation": "Issues track bugs, tasks and proposals.",
-    "source": "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"
-  },
-  {
-    "id": "git-13",
-    "topic": "git",
+    "id": "github-02",
+    "topic": "github",
     "difficulty": 2,
-    "question": "What does git merge do?",
+    "question": "Which sequence describes a coordinated open-source workflow with documentation automation configured?",
     "answers": [
-      "Combines development histories",
-      "Always deletes the source branch",
-      "Uploads files to the cloud",
-      "Changes the license"
+      "Changes with Git → Idea in forum → Merge on GitHub → Task in Issues",
+      "Idea in a forum/discussion → Task in GitHub Issues → Changes with Git → Review & merge via PR → Docs updated automatically",
+      "Direct push to main branch → Open an Issue → Delete branch",
+      "Write manual docs → Fork repo → Close all Issues"
     ],
-    "correct": 0,
-    "explanation": "Merge combines changes from different lines of development.",
-    "source": "https://git-scm.com/docs/git-merge"
+    "correct": 1,
+    "explanation": "This is one coordinated workflow; documentation updates automatically only when the appropriate CI or publishing service is configured.",
+    "source": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages"
   },
   {
-    "id": "git-14",
-    "topic": "git",
+    "id": "github-03",
+    "topic": "github",
     "difficulty": 2,
-    "question": "What does git rebase do?",
+    "question": "What is the primary purpose of creating a separate branch before making changes?",
     "answers": [
-      "Reapplies commits onto another base",
-      "Creates an issue",
-      "Encrypts history",
-      "Downloads tags only"
+      "To isolate your new features or bug fixes from the stable main codebase until they are tested and reviewed",
+      "To permanently delete old commit history",
+      "To convert a public repository into a private one",
+      "To automatically publish the code to an app store"
     ],
     "correct": 0,
-    "explanation": "Rebase replays changes onto a new base; commit IDs may change.",
-    "source": "https://git-scm.com/docs/git-rebase"
+    "explanation": "A branch isolates a line of development so work can be tested and reviewed before integration.",
+    "source": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell"
   },
   {
-    "id": "git-15",
-    "topic": "git",
-    "difficulty": 3,
-    "question": "Why is rebasing a shared published branch without coordination risky?",
+    "id": "github-04",
+    "topic": "github",
+    "difficulty": 2,
+    "question": "What does a commit represent in Git?",
     "answers": [
-      "It rewrites history others may depend on",
-      "It changes the project language",
-      "It always deletes the remote",
-      "It is prohibited by MIT"
+      "A request to delete a repository",
+      "A saved snapshot of changes made to files in the repository, accompanied by a descriptive message",
+      "A live chat message sent to repository maintainers",
+      "A legally binding software license"
     ],
-    "correct": 0,
-    "explanation": "Rewriting shared history requires coordination with collaborators.",
-    "source": "https://git-scm.com/book/en/v2/Git-Branching-Rebasing"
-  },
-  {
-    "id": "git-16",
-    "topic": "git",
-    "difficulty": 1,
-    "question": "What does git commit record?",
-    "answers": [
-      "A snapshot of staged changes",
-      "Only the username",
-      "All files on the computer",
-      "Only deleted files"
-    ],
-    "correct": 0,
-    "explanation": "A commit records the staged project state in repository history.",
+    "correct": 1,
+    "explanation": "A commit records a snapshot of the staged project state, a message and metadata in Git history.",
     "source": "https://git-scm.com/docs/git-commit"
   },
   {
-    "id": "git-17",
-    "topic": "git",
-    "difficulty": 2,
-    "question": "What does a merge conflict mean?",
-    "answers": [
-      "Git could not automatically reconcile changes",
-      "The repository is infected",
-      "The license expired",
-      "All commits were lost"
-    ],
-    "correct": 0,
-    "explanation": "A person resolves the content and completes the merge.",
-    "source": "https://git-scm.com/docs/git-merge"
-  },
-  {
-    "id": "git-18",
-    "topic": "git",
-    "difficulty": 2,
-    "question": "How do you get remote changes without automatically merging?",
-    "answers": [
-      "git fetch",
-      "git init",
-      "git add",
-      "git status"
-    ],
-    "correct": 0,
-    "explanation": "Fetch downloads objects and refs without performing a separate merge.",
-    "source": "https://git-scm.com/docs/git-fetch"
-  },
-  {
-    "id": "git-19",
-    "topic": "git",
+    "id": "github-05",
+    "topic": "github",
     "difficulty": 3,
-    "question": "What does git revert do?",
+    "question": "Which services can be connected to a GitHub repository to automatically build and publish updated documentation after a PR merge?",
     "answers": [
-      "Creates a new commit reversing changes",
-      "Erases the whole repository",
-      "Always removes the last commit from history",
-      "Creates a fork"
+      "Stack Overflow, Discord, and Matrix",
+      "GitHub Pages, Netlify, and ReadTheDocs",
+      "Zoom, Jitsi, and Slack",
+      "AutoCAD, Telegram, and Chrome"
     ],
-    "correct": 0,
-    "explanation": "Revert records inverse changes as a new commit.",
-    "source": "https://git-scm.com/docs/git-revert"
-  },
-  {
-    "id": "culture-20",
-    "topic": "culture",
-    "difficulty": 1,
-    "question": "What is CONTRIBUTING.md for?",
-    "answers": [
-      "Contribution guidelines",
-      "Storing passwords",
-      "A processor list",
-      "Private messages"
-    ],
-    "correct": 0,
-    "explanation": "Contribution guidelines explain setup, requirements and the contribution process.",
-    "source": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors"
-  },
-  {
-    "id": "culture-21",
-    "topic": "culture",
-    "difficulty": 1,
-    "question": "What does a CODE_OF_CONDUCT describe?",
-    "answers": [
-      "Community behavior expectations",
-      "Machine code format",
-      "Compiler licensing",
-      "Release frequency"
-    ],
-    "correct": 0,
-    "explanation": "A code of conduct sets expectations for interaction and reporting misconduct.",
-    "source": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/"
-  },
-  {
-    "id": "culture-22",
-    "topic": "culture",
-    "difficulty": 2,
-    "question": "In SemVer 2.0.0, an incompatible public API change increments…",
-    "answers": [
-      "MAJOR",
-      "MINOR",
-      "PATCH",
-      "Only build metadata"
-    ],
-    "correct": 0,
-    "explanation": "For a stable public API, an incompatible change increments MAJOR.",
-    "source": "https://semver.org/"
-  },
-  {
-    "id": "culture-23",
-    "topic": "culture",
-    "difficulty": 2,
-    "question": "What follows 1.4.2 for a backward-compatible bug fix?",
-    "answers": [
-      "1.4.3",
-      "2.0.0",
-      "1.5.0",
-      "1.4.2-major"
-    ],
-    "correct": 0,
-    "explanation": "Backward-compatible bug fixes increment PATCH.",
-    "source": "https://semver.org/"
-  },
-  {
-    "id": "culture-24",
-    "topic": "culture",
-    "difficulty": 2,
-    "question": "A backward-compatible feature is added to 1.4.2. Which SemVer version?",
-    "answers": [
-      "1.5.0",
-      "1.4.3",
-      "2.0.0",
-      "1.4.2"
-    ],
-    "correct": 0,
-    "explanation": "New compatible functionality increments MINOR and resets PATCH.",
-    "source": "https://semver.org/"
-  },
-  {
-    "id": "culture-25",
-    "topic": "culture",
-    "difficulty": 1,
-    "question": "Who is a changelog primarily written for?",
-    "answers": [
-      "People using the project",
-      "Only the compiler",
-      "The garbage collector",
-      "A DNS server"
-    ],
-    "correct": 0,
-    "explanation": "A changelog helps people understand meaningful changes between releases.",
-    "source": "https://keepachangelog.com/en/1.1.0/"
-  },
-  {
-    "id": "culture-26",
-    "topic": "culture",
-    "difficulty": 1,
-    "question": "What is most useful in a bug report?",
-    "answers": [
-      "Reproduction steps and expected behavior",
-      "Only the word “broken”",
-      "Your account password",
-      "An unrelated screenshot"
-    ],
-    "correct": 0,
-    "explanation": "Concrete steps and context help maintainers reproduce and fix the problem.",
-    "source": "https://opensource.guide/how-to-contribute/"
-  },
-  {
-    "id": "culture-27",
-    "topic": "culture",
-    "difficulty": 2,
-    "question": "What should you do before a large change to another project?",
-    "answers": [
-      "Discuss the idea with maintainers",
-      "Rewrite everything without discussion",
-      "Demand administrator access",
-      "Delete tests"
-    ],
-    "correct": 0,
-    "explanation": "Early discussion helps align the proposed work with project expectations.",
-    "source": "https://opensource.guide/how-to-contribute/"
-  },
-  {
-    "id": "culture-28",
-    "topic": "culture",
-    "difficulty": 3,
-    "question": "What does version 0.y.z mean in SemVer?",
-    "answers": [
-      "Initial development; public API is unstable",
-      "A guaranteed stable API",
-      "The project is necessarily abandoned",
-      "Source cannot be published"
-    ],
-    "correct": 0,
-    "explanation": "SemVer uses major zero for initial development, when the API may change.",
-    "source": "https://semver.org/"
-  },
-  {
-    "id": "history-29",
-    "topic": "history",
-    "difficulty": 1,
-    "question": "Who started developing the Linux kernel?",
-    "answers": [
-      "Linus Torvalds",
-      "Richard Stallman",
-      "Tim Berners-Lee",
-      "Guido van Rossum"
-    ],
-    "correct": 0,
-    "explanation": "Linus Torvalds started Linux in 1991.",
-    "source": "https://www.kernel.org/linux.html"
-  },
-  {
-    "id": "history-30",
-    "topic": "history",
-    "difficulty": 1,
-    "question": "In which year was the GNU project announced?",
-    "answers": [
-      "1983",
-      "1991",
-      "1998",
-      "2008"
-    ],
-    "correct": 0,
-    "explanation": "Richard Stallman announced GNU in September 1983.",
-    "source": "https://www.gnu.org/gnu/initial-announcement.html"
-  },
-  {
-    "id": "history-31",
-    "topic": "history",
-    "difficulty": 1,
-    "question": "What does the recursive acronym GNU stand for?",
-    "answers": [
-      "GNU’s Not Unix",
-      "Global Network Utility",
-      "General New User",
-      "Git Network Unit"
-    ],
-    "correct": 0,
-    "explanation": "GNU is the recursive acronym GNU’s Not Unix.",
-    "source": "https://www.gnu.org/gnu/about-gnu.html"
-  },
-  {
-    "id": "history-32",
-    "topic": "history",
-    "difficulty": 2,
-    "question": "When was the Free Software Foundation founded?",
-    "answers": [
-      "1985",
-      "1971",
-      "1998",
-      "2005"
-    ],
-    "correct": 0,
-    "explanation": "FSF was founded in 1985 to support computer user freedom.",
-    "source": "https://www.fsf.org/about/"
-  },
-  {
-    "id": "history-33",
-    "topic": "history",
-    "difficulty": 2,
-    "question": "In which year was the Open Source Initiative founded?",
-    "answers": [
-      "1998",
-      "1983",
-      "1991",
-      "2010"
-    ],
-    "correct": 0,
-    "explanation": "OSI was founded in 1998.",
-    "source": "https://opensource.org/history"
-  },
-  {
-    "id": "history-34",
-    "topic": "history",
-    "difficulty": 1,
-    "question": "In the strict technical sense, Linux is…",
-    "answers": [
-      "An operating system kernel",
-      "A text editor",
-      "A web browser",
-      "A version control system"
-    ],
-    "correct": 0,
-    "explanation": "The Linux kernel is combined with other components to form operating systems.",
-    "source": "https://www.kernel.org/linux.html"
-  },
-  {
-    "id": "history-35",
-    "topic": "history",
-    "difficulty": 2,
-    "question": "“Free” in free software primarily refers to…",
-    "answers": [
-      "User freedom",
-      "A mandatory zero price",
-      "No license",
-      "No authors"
-    ],
-    "correct": 0,
-    "explanation": "Free software concerns freedom rather than a mandatory zero price.",
-    "source": "https://www.gnu.org/philosophy/free-sw.html"
-  },
-  {
-    "id": "history-36",
-    "topic": "history",
-    "difficulty": 3,
-    "question": "What is the Open Source Definition based on?",
-    "answers": [
-      "Debian Free Software Guidelines",
-      "App Store terms",
-      "HTML rules",
-      "The Windows license"
-    ],
-    "correct": 0,
-    "explanation": "The Open Source Definition was adapted from the Debian Free Software Guidelines.",
-    "source": "https://opensource.org/osd"
+    "correct": 1,
+    "explanation": "These services support repository-based publishing when configured; Read the Docs specializes in documentation.",
+    "source": "https://docs.readthedocs.com/platform/stable/intro/getting-started-with-sphinx.html"
   }
 ]

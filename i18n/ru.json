@@ -20,9 +20,9 @@
   "choose": "выбор ответа",
   "checkpointHint": "⚑ Чекпоинт каждые 5 вопросов",
   "setup": "Настрой свой забег",
-  "topicHelp": "Выбери, что будем прокачивать",
+  "topicHelp": "Выбери лекцию и её локацию",
   "mix": "Всё вперемешку",
-  "mixDesc": "Полная картина open source",
+  "mixDesc": "Все 4 лекции · 20 вопросов",
   "licenses": "Лицензии",
   "culture": "Культура контрибуции",
   "history": "История open source",
@@ -93,5 +93,13 @@
   "back": "На старт",
   "restored": "Прогресс забега восстановлен. Нажми «Продолжить».",
   "runProgress": "Пройдено",
-  "git": "Git и GitHub"
+  "git": "Git и GitHub",
+  "basics": "Остров Open Source",
+  "dpg": "Город DPG",
+  "community": "Деревня сообщества",
+  "github": "Гора GitHub",
+  "basicsDesc": "Лекция 1 · основы, лицензии, модели",
+  "dpgDesc": "Лекция 2 · стандарт и реестр DPG",
+  "communityDesc": "Лекция 3 · роли и управление",
+  "githubDesc": "Лекция 4 · Git, PR и документация"
 }

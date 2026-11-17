@@ -20,9 +20,9 @@
   "choose": "choose answer",
   "checkpointHint": "⚑ Checkpoint every 5 questions",
   "setup": "Make it your run",
-  "topicHelp": "Choose your next skill to level up",
+  "topicHelp": "Choose a lecture and its location",
   "mix": "A bit of everything",
-  "mixDesc": "The whole open source picture",
+  "mixDesc": "All 4 lectures · 20 questions",
   "licenses": "Licenses",
   "culture": "Contribution culture",
   "history": "Open source history",
@@ -93,5 +93,13 @@
   "back": "Back to start",
   "restored": "Run progress restored. Press Resume.",
   "runProgress": "Completed",
-  "git": "Git & GitHub"
+  "git": "Git & GitHub",
+  "basics": "Open Source Island",
+  "dpg": "DPG City",
+  "community": "Community Village",
+  "github": "GitHub Mountain",
+  "basicsDesc": "Lecture 1 · basics, licenses, models",
+  "dpgDesc": "Lecture 2 · DPG standard and registry",
+  "communityDesc": "Lecture 3 · roles and governance",
+  "githubDesc": "Lecture 4 · Git, PR and documentation"
 }
