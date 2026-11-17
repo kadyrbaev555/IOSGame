@@ -15,8 +15,21 @@
   let storageWarning=false;
   function persistProfile(){if(!storage.set('parkour.profile',profile)&&!storageWarning){storageWarning=true;announce(t('savedWarning'));}updateProfile();}
   function updateProfile(){$('best').textContent=profile.best;$('wallet').textContent=profile.wallet;$('shopWallet').textContent=profile.wallet;$('totalRuns').textContent=profile.runs;}
-  function applyTranslations(){document.documentElement.lang=profile.lang;document.title=`${t('brand')} · Open source playground`;document.querySelectorAll('[data-i18n]').forEach(el=>{const value=t(el.dataset.i18n);el.replaceChildren(...value.split('<br>').flatMap((part,i)=>i?[document.createElement('br'),document.createTextNode(' '+part)]:[document.createTextNode(part)]));});$('lang').textContent=profile.lang==='ru'?'EN':'RU';}
-  function lock(value){['start','timerEnabled','runLength','lang','importFile','importUrl'].forEach(id=>$(id).disabled=value);document.querySelectorAll('.topic,#importForm button').forEach(el=>el.disabled=value);$('pause').hidden=!value;}
+  function applyTranslations(){document.documentElement.lang=profile.lang;document.title=`${t('brand')} · Open source playground`;document.querySelectorAll('[data-i18n]').forEach(el=>{const value=t(el.dataset.i18n);el.replaceChildren(...value.split('<br>').flatMap((part,i)=>i?[document.createElement('br'),document.createTextNode(' '+part)]:[document.createTextNode(part)]));});$('lang').textContent=profile.lang==='ru'?'EN':'RU';updateExpandLabel();}
+  function updateExpandLabel(){
+    const expanded=$('playArea').classList.contains('expanded');
+    const label=t(expanded?'shrinkGame':'expandGame');
+    $('expandGame').setAttribute('aria-label',label);$('expandGame').title=label;
+    $('expandGame').setAttribute('aria-pressed',String(expanded));
+    $('expandGame').textContent=expanded?'⊡':'⛶';
+  }
+  function setExpanded(expanded){
+    $('playArea').classList.toggle('expanded',expanded);
+    document.body.classList.toggle('game-expanded',expanded);
+    updateExpandLabel();
+  }
+  $('expandGame').onclick=()=>setExpanded(!$('playArea').classList.contains('expanded'));
+  function lock(value){['start','timerEnabled','runLength','lang','importFile','importUrl'].forEach(id=>$(id).disabled=value);document.querySelectorAll('.topic,#importForm button').forEach(el=>el.disabled=value);$('pause').hidden=!value;$('expandGame').hidden=!value;if(!value)setExpanded(false);}
   function hud(s){$('hearts').textContent='♥ '.repeat(s.lives)+'♡ '.repeat(3-s.lives);$('hearts').setAttribute('aria-label',`${s.lives} / 3`);$('score').textContent=s.score;$('runCoins').textContent=s.coins;$('distance').textContent=String(s.index*12+s.finalJump*5).padStart(3,'0');$('sceneLevel').textContent=String(Math.min(3,Math.floor(s.index/4)+1)).padStart(2,'0');}
   const renderer=new Parkour.Renderer($('game'));
   function locationFor(selected){
@@ -63,7 +76,7 @@
   function imported(data){custom=data;$('customTopic').hidden=false;$('customCount').textContent=String(data.length);$('importStatus').textContent=t('importOk');$('customTopic').click();}
   $('importFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>2*1024*1024)throw Error('Maximum size is 2 MB');imported(Parkour.Questions.parse(await file.text()));}catch(err){$('importStatus').textContent=t('importError')+' '+err.message;}e.target.value='';};
   $('importForm').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('button');b.disabled=true;$('importStatus').textContent=t('loading');try{imported(await Parkour.Questions.fromURL($('importUrl').value));}catch(err){$('importStatus').textContent=t('importError')+' '+err.message;}finally{b.disabled=!['idle','finished'].includes(game.state.phase);}};
-  document.addEventListener('keydown',e=>{if(e.repeat||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(document.querySelector('dialog[open]'))return;if(e.key==='Escape'){pause();return;}if(game.state.phase==='final'&&(e.code==='Space'||e.code==='Enter')){e.preventDefault();game.finalJump();return;}const key=e.key.toLowerCase();let index='1234'.indexOf(key);if(index<0)index='abcd'.indexOf(key);if(index>=0){e.preventDefault();game.answer(index);}});
+  document.addEventListener('keydown',e=>{if(e.repeat||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(document.querySelector('dialog[open]'))return;if(e.key==='Escape'){if($('playArea').classList.contains('expanded')){e.preventDefault();setExpanded(false);$('expandGame').focus({preventScroll:true});}else pause();return;}if(game.state.phase==='final'&&(e.code==='Space'||e.code==='Enter')){e.preventDefault();game.finalJump();return;}const key=e.key.toLowerCase();let index='1234'.indexOf(key);if(index<0)index='abcd'.indexOf(key);if(index>=0){e.preventDefault();game.answer(index);}});
   $('game').addEventListener('pointerup',e=>{const r=$('game').getBoundingClientRect();const index=renderer.hit(e.clientX-r.left,e.clientY-r.top);if(index>=0){if(game.state.phase==='final')game.finalJump();else game.answer(index);}});
   applyTranslations();updateProfile();const saved=storage.get('parkour.run',null);const builtinIds=new Set(ParkourData.questions[profile.lang].map(q=>q.id));const compatible=saved?.options?.topic==='custom'||(Array.isArray(saved?.questions)&&saved.questions.every(q=>builtinIds.has(q.id)));if(saved&&!compatible)storage.set('parkour.run',null);if(saved&&compatible&&saved.lang===profile.lang&&game.restore(saved)){if(game.state.phase!=='finished'){selectTopic(game.options?.topic||'mix');locationFor(game.state.current?.topic||game.options?.topic);$('pauseDialog').showModal();announce(t('restored'));}}else idle();
   // Exposed for deterministic integration tests and contributor debugging.

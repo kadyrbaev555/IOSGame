@@ -101,5 +101,7 @@
   "basicsDesc": "Lecture 1 · basics, licenses, models",
   "dpgDesc": "Lecture 2 · DPG standard and registry",
   "communityDesc": "Lecture 3 · roles and governance",
-  "githubDesc": "Lecture 4 · Git, PR and documentation"
+  "githubDesc": "Lecture 4 · Git, PR and documentation",
+  "expandGame": "Expand game",
+  "shrinkGame": "Shrink game"
 }
